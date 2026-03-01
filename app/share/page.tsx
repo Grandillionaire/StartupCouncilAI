@@ -5,6 +5,7 @@ import { useEffect, useState, Suspense } from 'react';
 import { decodeConversation } from '@/lib/utils/share-utils';
 import { PERSONAS } from '@/lib/agents/personas';
 import { formatTimestamp, cn } from '@/lib/utils';
+import { sanitizeUrl } from '@/lib/utils/security';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import {
@@ -269,7 +270,7 @@ function SharePageContent() {
                             {message.sources.map((source: any, idx: number) => (
                               <a
                                 key={idx}
-                                href={source.url}
+                                href={sanitizeUrl(source.url) || '#'}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-start gap-2 text-xs text-blue-600 hover:text-blue-700 hover:underline"

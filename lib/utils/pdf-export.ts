@@ -5,6 +5,7 @@
 
 import type { Message } from '@/lib/stores/debate-store';
 import { PERSONAS } from '@/lib/agents/personas';
+import { sanitizeUrl } from '@/lib/utils/security';
 
 interface ExportOptions {
   title: string;
@@ -35,7 +36,7 @@ export function exportToPDF(options: ExportOptions): void {
     <html>
       <head>
         <meta charset="UTF-8">
-        <title>${title}</title>
+        <title>${escapeHtml(title)}</title>
         <style>
           @media print {
             @page { margin: 1in; }
@@ -233,7 +234,7 @@ function generateDebateHTML(messages: Message[]): string {
               ${message.sources.map((s, i) => `
                 <div class="source-item">
                   [${i + 1}] ${escapeHtml(s.title)}<br>
-                  <a href="${s.url}" target="_blank">${s.url}</a>
+                  <a href="${sanitizeUrl(s.url) || '#'}" target="_blank">${escapeHtml(s.url)}</a>
                 </div>
               `).join('')}
             </div>

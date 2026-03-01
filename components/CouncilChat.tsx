@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { PERSONAS, ADVISOR_NAMES, type AdvisorName } from '@/lib/agents/personas';
 import { cn, formatTimestamp } from '@/lib/utils';
+import { sanitizeUrl } from '@/lib/utils/security';
 import {
   Send, Loader2, AlertCircle, RotateCcw, Copy, CheckCheck,
   StopCircle, Info, ThumbsUp, ThumbsDown, Repeat, PlayCircle,
@@ -1469,7 +1470,7 @@ export default function CouncilChat() {
                             {message.sources.map((source, idx) => (
                               <a
                                 key={idx}
-                                href={source.url}
+                                href={sanitizeUrl(source.url) || '#'}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="flex items-start gap-2 text-[11px] text-blue-600 hover:text-blue-700 hover:underline"
@@ -1566,7 +1567,7 @@ export default function CouncilChat() {
                           </span>
                           <div className="flex-1 min-w-0">
                             <a
-                              href={source.url}
+                              href={sanitizeUrl(source.url) || '#'}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="font-medium text-sm text-blue-700 hover:text-blue-900 hover:underline flex items-center gap-1"

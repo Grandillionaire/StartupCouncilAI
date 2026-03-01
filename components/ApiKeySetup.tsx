@@ -109,8 +109,7 @@ export default function ApiKeySetup({ isOpen, onClose, onSave, initialKeys }: Ap
           {/* Info */}
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
             <p className="text-sm text-blue-900 dark:text-blue-100">
-              Your API keys are stored locally in your browser and never sent to our servers.
-              They're only used to make direct API calls to Anthropic and Tavily.
+              Your API keys are transmitted securely over HTTPS to our server for processing, and are never stored or logged.
             </p>
           </div>
 
@@ -200,8 +199,8 @@ export default function ApiKeySetup({ isOpen, onClose, onSave, initialKeys }: Ap
             </summary>
             <div className="mt-3 space-y-2 text-gray-600 dark:text-gray-400">
               <p>1. Your API keys are stored in your browser's localStorage</p>
-              <p>2. When you ask a question, keys are sent directly to AI APIs</p>
-              <p>3. No keys are ever stored on our servers</p>
+              <p>2. When you ask a question, keys are sent securely over HTTPS to our server, which forwards them to AI APIs</p>
+              <p>3. Keys are never stored or logged on our servers</p>
               <p>4. You can update or remove keys anytime in Settings</p>
             </div>
           </details>
