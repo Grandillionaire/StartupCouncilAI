@@ -118,7 +118,7 @@ export const CouncilDebateRequestSchema = z.object({
     .min(1, 'Question cannot be empty')
     .max(5000, 'Question is too long (max 5000 characters)'),
   conversationHistory: z.string()
-    .max(100000, 'Conversation history is too large'),
+    .max(20000, 'Conversation history is too large'),
   mode: DebateModeSchema,
   advisors: z.array(AdvisorNameSchema)
     .min(2, 'Select at least 2 advisors')
@@ -242,9 +242,10 @@ export function checkRateLimit(
  */
 export function getRateLimitIdentifier(request: Request): string {
   // Try to get IP from various headers (for proxies/load balancers)
+  const vercelIp = request.headers.get('x-vercel-forwarded-for');
   const forwarded = request.headers.get('x-forwarded-for');
   const realIp = request.headers.get('x-real-ip');
-  const ip = forwarded?.split(',')[0] || realIp || 'unknown';
+  const ip = vercelIp || (forwarded ? forwarded.split(',').pop()?.trim() : null) || realIp || 'unknown';
 
   return `ip:${ip}`;
 }

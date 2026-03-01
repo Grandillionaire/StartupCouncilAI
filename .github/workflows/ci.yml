@@ -30,14 +30,12 @@ jobs:
 
     - name: Run lint
       run: npm run lint
-      continue-on-error: true
 
     - name: Build project
       run: npm run build
 
     - name: Check for TypeScript errors
       run: npx tsc --noEmit
-      continue-on-error: true
 
   security:
     name: Security Audit
@@ -58,7 +56,6 @@ jobs:
 
     - name: Run security audit
       run: npm audit --production
-      continue-on-error: true
 
     - name: Check for outdated dependencies
       run: npm outdated

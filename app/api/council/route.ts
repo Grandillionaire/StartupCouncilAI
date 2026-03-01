@@ -12,6 +12,7 @@ import {
   getRateLimitIdentifier,
   getSafeErrorMessage,
   logSecurityEvent,
+  sanitizeInput,
 } from '@/lib/utils/security';
 import { z } from 'zod';
 
@@ -20,6 +21,13 @@ export const dynamic = 'force-dynamic';
 
 export async function POST(request: NextRequest) {
   try {
+    // SECURITY: CORS origin check
+    const origin = request.headers.get('origin');
+    const allowedOrigins = [process.env.NEXT_PUBLIC_APP_URL, 'http://localhost:3000'].filter(Boolean);
+    if (origin && !allowedOrigins.includes(origin)) {
+      return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+    }
+
     // SECURITY: Rate limiting - 10 requests per minute per IP
     const identifier = getRateLimitIdentifier(request);
     const rateLimit = checkRateLimit(identifier, 10, 60 * 1000);
@@ -45,6 +53,9 @@ export async function POST(request: NextRequest) {
     // SECURITY: Parse and validate request body with Zod
     const body = await request.json();
     const validatedData = CouncilDebateRequestSchema.parse(body);
+
+    // SECURITY: Sanitize user question input
+    validatedData.question = sanitizeInput(validatedData.question);
 
     // Support both environment variables AND user-provided keys
     const apiKey = validatedData.anthropicKey || process.env.ANTHROPIC_API_KEY;
