@@ -55,7 +55,7 @@ Deploy Your Own AI Council
 
 Set to your demo/documentation site (or leave as deployment guide):
 ```
-https://github.com/Grandillionaire/SelfStarterSuite/blob/main/DEPLOYMENT.md
+https://github.com/maximilliangrand/SelfStarterSuite/blob/main/DEPLOYMENT.md
 ```
 
 ## README Badges
@@ -63,7 +63,7 @@ https://github.com/Grandillionaire/SelfStarterSuite/blob/main/DEPLOYMENT.md
 Add these badges to the top of your README for clarity:
 
 ```markdown
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Grandillionaire/SelfStarterSuite)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/maximilliangrand/SelfStarterSuite)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Self-Hosted](https://img.shields.io/badge/Deployment-Self--Hosted-blue)](./DEPLOYMENT.md)
 [![Bring Your Own Keys](https://img.shields.io/badge/API_Keys-BYOK-green)](https://console.anthropic.com)
@@ -116,7 +116,7 @@ When someone visits your repo, they should immediately see:
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│ Grandillionaire / SelfStarterSuite                      │
+│ maximilliangrand / SelfStarterSuite                      │
 │                                                         │
 │ 🚀 Deploy your own AI council on Vercel (free). Five    │
 │ legendary advisors debate your questions. Self-hosted   │

@@ -149,11 +149,11 @@ git push origin main
 - ⚡ Free Vercel hosting
 
 ### Deploy Your Own Instance
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Grandillionaire/SelfStarterSuite)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/maximilliangrand/SelfStarterSuite)
 
 **Cost:** Free hosting + ~$0.03 per debate (Anthropic API)
 
-**Full Guide:** https://github.com/Grandillionaire/SelfStarterSuite/blob/main/DEPLOYMENT.md
+**Full Guide:** https://github.com/maximilliangrand/SelfStarterSuite/blob/main/DEPLOYMENT.md
 ```
 
 ### 3. Social Media Announcement (Optional)

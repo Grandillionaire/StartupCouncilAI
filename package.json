@@ -30,12 +30,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Grandillionaire/SelfStarterSuite.git"
+    "url": "https://github.com/maximilliangrand/SelfStarterSuite.git"
   },
   "bugs": {
-    "url": "https://github.com/Grandillionaire/SelfStarterSuite/issues"
+    "url": "https://github.com/maximilliangrand/SelfStarterSuite/issues"
   },
-  "homepage": "https://github.com/Grandillionaire/SelfStarterSuite#readme",
+  "homepage": "https://github.com/maximilliangrand/SelfStarterSuite#readme",
   "dependencies": {
     "@anthropic-ai/sdk": "^0.68.0",
     "@langchain/anthropic": "^1.0.0",

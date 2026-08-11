@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Grandillionaire/StartupCouncilAI)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/maximilliangrand/StartupCouncilAI)
 [![Self-Hosted](https://img.shields.io/badge/Deployment-Self--Hosted-blue)](./DEPLOYMENT.md)
 [![Bring Your Own Keys](https://img.shields.io/badge/API_Keys-BYOK-green)](https://console.anthropic.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -100,7 +100,7 @@ StartupCouncilAI provides access to an AI council featuring Naval Ravikant, Elon
 
 Click this button → Sign in with GitHub → Click "Deploy":
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Grandillionaire/StartupCouncilAI)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/maximilliangrand/StartupCouncilAI)
 
 **What happens:**
 
@@ -187,7 +187,7 @@ For development or testing locally:
 
 ```bash
 # Clone the repository
-git clone https://github.com/Grandillionaire/SelfStarterSuite.git
+git clone https://github.com/maximilliangrand/SelfStarterSuite.git
 cd SelfStarterSuite
 
 # Install dependencies

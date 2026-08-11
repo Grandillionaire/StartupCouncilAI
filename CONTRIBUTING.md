@@ -72,7 +72,7 @@ Add export conversation feature
 
 When contributing, you agree that:
 - Your contributions will be licensed under the MIT License with Attribution Requirement
-- The original attribution to grandillionaire must be maintained
+- The original attribution to maximilliangrand must be maintained
 - Any forks or derivative works must include proper attribution
 
 ## Code of Conduct
